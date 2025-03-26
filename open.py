@@ -156,6 +156,9 @@ def overlay_translated_text(image, extracted_words, translated_words, font_path)
     except Exception as e:
         print(f"⚠️ Error overlaying text: {e}")
         return image
+@app.route("/")
+def home():
+    return "Flask server is running!"
 
 @app.route("/translate", methods=["POST"])
 def process_image():
