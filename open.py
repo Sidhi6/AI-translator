@@ -11,7 +11,7 @@ import os
 
 app = Flask(__name__)
 # Set OpenAI API key
-openai.api_key = ""
+openai.api_key = os.getenv("OPENAI_API_KEY")
 
 # Path to the font file
 font_path = "NotoSansDevanagari-Regular.ttf"
